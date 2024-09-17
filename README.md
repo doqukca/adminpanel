@@ -1,0 +1,1 @@
+# adm-npanell-s-te
