@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" id="site-favicon" href="favicons/favicon.ico" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faviconUrl = localStorage.getItem('faviconUrl');
+            if (faviconUrl) {
+                const favicon = document.getElementById('site-favicon');
+                favicon.href = faviconUrl;
+            }
+        });
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webiz Digital Agency | Bootstrap Template </title>
+    <script>
+      window.onload = function () {
+          const savedTitle = localStorage.getItem('pageTitle');
+          if (savedTitle) {
+              document.title = savedTitle;
+              document.getElementById('pageTitle').innerText = savedTitle;
+          }
+      };
+  </script>
+    <meta name="description" content="">
+    <link rel="canonical" href="https://www.nameagency.com">
+    <meta property="og:url" content="https://www.nameagency.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+
+  </head>
+  <body>
+    <!-- Navbar Menu  ---->
+    <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <a class="navbar-brand" href="#">
+          <script>
+            window.addEventListener('load', function () {
+                const savedLogo = localStorage.getItem('pageLogo');
+    
+                if (savedLogo) {
+                    const logoElement = document.getElementById('logo');
+                    if (logoElement) {
+                        logoElement.src = savedLogo; // Set the logo's src to the saved base64 image
+                    }
+                }
+            });
+        </script>
+           <img id="logo" src="" alt="Logo" width="150">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <i class="fa fa-bars"></i>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" id="homeLink" href="#top">Anasayfa <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="servicesLink" href="#services">Hizmetlerimiz</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="aboutLink" href="#about">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="contactLink" href="#contact">İletişim</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="signinLink" href="admin/signin.html">Giriş Yap</a>
+              </li>
+          </ul>
+      </div>
+    
+    
+      </nav>
+    </section>
+    <!--- Banner Hero section ------->
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p id="editableText">Your Digital Agency</p>
+            <script>
+              // Sayfa yüklendiğinde kaydedilen yazı ve stil ayarlarını yükle
+              window.addEventListener('load', function () {
+                  const savedTextSettings = JSON.parse(localStorage.getItem('pageText'));
+      
+                  if (savedTextSettings) {
+                      const textElement = document.getElementById('editableText');
+                      if (textElement) {
+                          // Yazı ve stil ayarlarını güncelle
+                          textElement.textContent = savedTextSettings.content;
+                          textElement.style.color = savedTextSettings.color;
+                          textElement.style.fontWeight = savedTextSettings.weight;
+                          textElement.style.fontStyle = savedTextSettings.style;
+                          textElement.style.fontSize = `${savedTextSettings.size}px`;
+                      }
+                  }
+              });
+          </script>
+          
+        
+          <body>
+          
+              <!-- Burada sloganın görüneceği alan -->
+              <p id="slogan">Bu slogan değiştirilebilir.</p>
+
+              <!-- JavaScript kodu -->
+              <script>
+                  // Sayfa yüklendiğinde slogan verilerini localStorage'dan al
+                  window.addEventListener('load', function () {
+                      const savedSloganSettings = JSON.parse(localStorage.getItem('sloganText'));
+          
+                      if (savedSloganSettings) {
+                          const sloganElement = document.getElementById('slogan');
+                          if (sloganElement) {
+                              sloganElement.textContent = savedSloganSettings.content;
+                              sloganElement.style.color = savedSloganSettings.color;
+                              sloganElement.style.fontWeight = savedSloganSettings.weight;
+                              sloganElement.style.fontStyle = savedSloganSettings.style;
+                              sloganElement.style.fontSize = `${savedSloganSettings.size}px`;
+                          }
+                      }
+                  });
+              </script>
+          
+          </body>
+          </html>
+          
+          </div>
+            <div class="col-md-6">
+              <img src="svg/undraw_email_campaign_qa8y.svg" alt="" class="img-fluid">
+            </div>
+        </div>
+      </div>
+        <!--- Background wave Hero ---->
+        <img src="images/ground@-min.png" class="bottom-img" alt="">
+    </section>
+
+    <!--- Services ---->
+    <section id="services">
+      <div class="container text-center">
+        <div class="container text-center">
+          <h3 class="title text-center" id="sectionTitleDisplay">SERVICES</h3>
+      </div>
+      
+      <script>
+          // Sayfa yüklendiğinde localStorage'dan başlığı oku
+          document.addEventListener('DOMContentLoaded', function() {
+              // Başlığı localStorage'dan oku
+              const sectionTitle = localStorage.getItem('sectionTitle');
+      
+              // Başlığı DOM elemanına yerleştir
+              if (sectionTitle) {
+                  document.getElementById('sectionTitleDisplay').textContent = sectionTitle;
+              }
+          });
+      </script>
+      
+        <div class="row text-center">
+          <div class="col-md-4 services">
+            <img id="serviceImage" src="svg/ads.svg" class="service-img" alt="">
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                  const imageElement = document.getElementById('serviceImage');
+                  const imageUrl = localStorage.getItem('serviceImage');
+                  
+                  if (imageUrl) {
+                      imageElement.src = imageUrl;
+                  }
+              });
+      
+              function showAlert(type, message) {
+                  const alertContainer = document.getElementById('alertContainer');
+                  alertContainer.innerHTML = `
+                      <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                          <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  `;
+              }
+          </script>
+            <h4 id="serviceTitle">Landing Page Design</h4>
+            <script>
+              // Sayfa yüklendiğinde başlık ayarlarını uygulama
+              document.addEventListener('DOMContentLoaded', function () {
+                  const subtitleSettings = JSON.parse(localStorage.getItem('subtitleSettings'));
+      
+                  if (subtitleSettings) {
+                      const subtitleElement = document.getElementById('serviceTitle');
+                      if (subtitleElement) {
+                          subtitleElement.textContent = subtitleSettings.content;
+                          subtitleElement.style.color = subtitleSettings.color;
+                          subtitleElement.style.fontWeight = subtitleSettings.weight;
+                          subtitleElement.style.fontSize = subtitleSettings.size;
+                          subtitleElement.style.fontStyle = subtitleSettings.style;
+                      }
+                  }
+              });
+      
+              // Alert gösterme işlevi (isteğe bağlı)
+              function showAlert(type, message) {
+                  const alertContainer = document.getElementById('alertContainer');
+                  alertContainer.innerHTML = `
+                      <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                          <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  `;
+              }
+      
+              // Örnek: Başarı mesajı göstermek
+              // showAlert('success', 'Başlık başarıyla güncellendi!');
+          </script>
+           <p id="serviceParagraph">bura1</p>
+           <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const paragraphSettings = JSON.parse(localStorage.getItem('paragraphSettings'));
+    
+                if (paragraphSettings) {
+                    const paragraphElement = document.getElementById('serviceParagraph');
+                    if (paragraphElement) {
+                        paragraphElement.textContent = paragraphSettings.content;
+                        paragraphElement.style.color = paragraphSettings.color;
+                        paragraphElement.style.fontWeight = paragraphSettings.weight;
+                        paragraphElement.style.fontSize = paragraphSettings.size;
+                        paragraphElement.style.fontStyle = paragraphSettings.style;
+                    }
+                }
+            });
+    
+            function showAlert(type, message) {
+                const alertContainer = document.getElementById('alertContainer');
+                alertContainer.innerHTML = `
+                    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                        <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+            }
+        </script>
+          </div>
+<!--burası2-->
+          <div class="col-md-4 services">
+            <img id="rahibeFotoImage" src="svg/ads.svg" class="service-img" alt="">
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const imageElement = document.getElementById('rahibeFotoImage');
+      const imageUrl = localStorage.getItem('rahibeFotoImage');
+      
+      if (imageUrl) {
+          imageElement.src = imageUrl;
+      }
+  });
+
+  function showAlert(type, message) {
+      const alertContainer = document.getElementById('rahibeFotoAlertContainer');
+      alertContainer.innerHTML = `
+          <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+              <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      `;
+  }
+</script>
+
+            <h4 id="subtitleHeading" class="title">B</h4>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                  const rahibeSubtitleSettings = JSON.parse(localStorage.getItem('rahibeSubtitleSettings'));
+          
+                  if (rahibeSubtitleSettings) {
+                      const subtitleElement = document.getElementById('subtitleHeading');
+                      if (subtitleElement) {
+                          subtitleElement.textContent = rahibeSubtitleSettings.content;
+                          subtitleElement.style.color = rahibeSubtitleSettings.color;
+                          subtitleElement.style.fontWeight = rahibeSubtitleSettings.weight;
+                          subtitleElement.style.fontSize = rahibeSubtitleSettings.size;
+                          subtitleElement.style.fontStyle = rahibeSubtitleSettings.style;
+                      }
+                      showAlert('success', 'Alt başlık ayarları başarıyla yüklendi!');
+                  } else {
+                      showAlert('warning', 'Alt başlık ayarları bulunamadı!');
+                  }
+              });
+          
+              function showAlert(type, message) {
+                  const alertContainer = document.getElementById('subtitleAlertContainer');
+                  alertContainer.innerHTML = `
+                      <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                          <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  `;
+              }
+          </script>
+          
+          
+         <p id="rahibeParagraph">bura2</p>
+         <div id="rahibeAlertContainer"></div>
+         
+         <!-- JavaScript kodunu burada ekleyin -->
+         <script>
+             document.addEventListener('DOMContentLoaded', function () {
+                 const rahibeSettings = JSON.parse(localStorage.getItem('rahibeSettings'));
+         
+                 if (rahibeSettings) {
+                     const paragraphElement = document.getElementById('rahibeParagraph');
+                     if (paragraphElement) {
+                         paragraphElement.textContent = rahibeSettings.content;
+                         paragraphElement.style.color = rahibeSettings.color;
+                         paragraphElement.style.fontWeight = rahibeSettings.weight;
+                         paragraphElement.style.fontSize = rahibeSettings.size + 'px';
+                         paragraphElement.style.fontStyle = rahibeSettings.style;
+                     }
+                     showAlert('success', 'Paragraf ayarları başarıyla yüklendi!');
+                 } else {
+                     showAlert('warning', 'Paragraf ayarları bulunamadı!');
+                 }
+             });
+         
+           
+         </script>
+         
+     
+          </div>
+
+          <div class="col-md-4 services">
+            <img id="bugraFotoImage" src="svg/ads.svg" class="service-img" alt="">
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const imageElement = document.getElementById('bugraFotoImage');
+      const imageUrl = localStorage.getItem('bugraFotoImage');
+      
+      if (imageUrl) {
+          imageElement.src = imageUrl;
+      }
+  });
+
+  function showAlert(type, message) {
+      const alertContainer = document.getElementById('bugraFotoAlertContainer');
+      alertContainer.innerHTML = `
+          <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+              <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      `;
+  }
+</script>
+
+
+            <h4 id="bugraSubtitleHeading" class="title">Bura 3</h4>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const bugraSubtitleSettings = JSON.parse(localStorage.getItem('bugraSubtitleSettings'));
+
+        if (bugraSubtitleSettings) {
+            const subtitleElement = document.getElementById('bugraSubtitleHeading');
+            if (subtitleElement) {
+                subtitleElement.textContent = bugraSubtitleSettings.content;
+                subtitleElement.style.color = bugraSubtitleSettings.color;
+                subtitleElement.style.fontWeight = bugraSubtitleSettings.weight;
+                subtitleElement.style.fontSize = bugraSubtitleSettings.size;
+                subtitleElement.style.fontStyle = bugraSubtitleSettings.style;
+            }
+            showAlert('success', 'Alt başlık ayarları başarıyla yüklendi!');
+        } else {
+            showAlert('warning', 'Alt başlık ayarları bulunamadı!');
+        }
+    });
+
+    function showAlert(type, message) {
+        const alertContainer = document.getElementById('bugraSubtitleAlertContainer');
+        alertContainer.innerHTML = `
+            <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                <i class="fa fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+    }
+</script>
+<p id="bugraParagraph">bura2</p>
+<div id="bugraAlertContainer"></div>
+
+<!-- JavaScript kodunu burada ekleyin -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const bugraSettings = JSON.parse(localStorage.getItem('bugraSettings'));
+
+        if (bugraSettings) {
+            const paragraphElement = document.getElementById('bugraParagraph');
+            if (paragraphElement) {
+                paragraphElement.textContent = bugraSettings.content;
+                paragraphElement.style.color = bugraSettings.color;
+                paragraphElement.style.fontWeight = bugraSettings.weight;
+                paragraphElement.style.fontSize = bugraSettings.size + 'px';
+                paragraphElement.style.fontStyle = bugraSettings.style;
+            }
+            showAlert('success', 'Paragraf ayarları başarıyla yüklendi!');
+        } else {
+            showAlert('warning', 'Paragraf ayarları bulunamadı!');
+        }
+    });
+
+   
+</script>
+
+          </div>
+          
+        </div>
+  
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!--- About Section ------>
+ >
+ 
+    <!-- Footer ------>
+    <section id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-box">
+                <p id="contact"><b>İLETİŞİM</b></p>
+                <p> <i class="fa fa-phone"></i>+90 534 729 74 25</p>
+             
+                
+                <p>
+                    <a href="mailto:yilmazdigitall0@gmail.com" style="text-decoration: none; color: inherit;">
+                        <i class="fa fa-envelope-o"></i> yilmazdigitall0@gmail.com
+                    </a>
+                </p>
+                
+                <p>
+                    <a href="https://www.instagram.com/yilmazdigitall" target="_blank" style="text-decoration: none; color: inherit;">
+                        <i class="fa fa-instagram"></i> yilmazdigitall
+                    </a>
+                </p>
+                
+            </div>
+            <div class="col-md-4 footer-box">
+ 
+                </div>
+            </div>
+           
+         
+          </div>
+          <br>
+        </div>
+    </section>
+    <!--- Smooth Scroll js ---------->
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script>
+	    var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+  </body>
+</html>
